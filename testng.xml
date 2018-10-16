@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SiteCore" parallel="methods" thread-count="2">
+
+    <listeners>
+        <listener class-name="ParallelTest.WebDriverListener"></listener>
+        <listener class-name="baseTest"/>
+    </listeners>
+
+
+    <test name="Test">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="TestCase"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
